@@ -1,0 +1,12 @@
+steps:
+  eowyn:
+    image: ziglings/ziglang:latest
+    pull: true
+    commands:
+      - sh ./patches/eowyn.sh
+    when:
+      events:
+        - push
+        - pull-requests
+        - cron
+      cron: "Daily"
