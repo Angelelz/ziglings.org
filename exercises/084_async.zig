@@ -48,7 +48,8 @@ const print = @import("std").debug.print;
 pub fn main() void {
     // Additional Hint: you can assign things to '_' when you
     // don't intend to do anything with them.
-    foo();
+    const frame = async foo();
+    _ = frame;
 }
 
 fn foo() void {
